@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="registration form.js" defer></script>
+</head>
+<body class="flex justify-center  min-h-screen bg-gray-400">
+    <div class="bg-white p-6 rounded shadow-lg w-96">
+        <h1 class="text-2xl font-bold text-center mb-4">Event Registration</h1>
+
+        <label class="block font-semibold">Name:</label>
+        <input type="text" id="nameInput" placeholder="Enter your name" 
+               class="border p-2 w-full rounded mt-1">
+        <p>You typed: <span id="nameOutput" class="text-blue-600"></span></p>
+
+        <label class="block font-semibold mt-3">Contact No:</label>
+        <input type="tel" id="contactInput" placeholder="Enter contact number" 
+               class="border p-2 w-full rounded mt-1" maxlength="10">
+
+        <label class="block font-semibold mt-3">Select Event:</label>
+        <select id="eventSelect" class="border p-2 w-full rounded mt-1">
+            <option value="">-- Choose Event --</option>
+            <option value="Coding">Coding</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Drone Making">Drone Making</option>
+            <option value="Robotics">Robotics</option>
+            <option value="Automation">Automation</option>
+        </select>
+        <p>Selected Event: <span id="eventOutput" class="text-green-600"></span></p>
+
+        <button id="registerBtn" disabled 
+                class="bg-gray-400 text-white px-4 py-2 rounded mt-4 w-full  cursor-not-allowed">
+            Register
+        </button>
+        
+        <p id="registrationMessage" class="text-center text-xl font-semibold text-green-600 mt-2 hidden">
+            Registration Done
+        </p>
+    </div>
+
+</body>
+</html>
+
+
+
+<!-- 
+Onclick to show the "Registration Done"
+onchange should be applied in List of events.
+oninput for name
+onkeypress for contact no
+Manipulation on submit button should be done by JS
+
+-->
